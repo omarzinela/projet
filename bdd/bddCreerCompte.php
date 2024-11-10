@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 include_once '../composant/bddConn.inc.php';
 
-$stmt = $mysqli->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Tel, Pass) values (?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Tel, Pass) values (?, ?, ?, ?, ?)");
 $stmt->bind_param($Nom, $Prenom, $Email, $Numero, $Password);
 if (!$stmt->execute()) {
     echo "Echec exécution requête: " . $stmt->error;
@@ -20,3 +20,5 @@ if (!$stmt->execute()) {
 
 // Closing the connection.
 $conn->close();
+
+header('Location: '."../index.php");
