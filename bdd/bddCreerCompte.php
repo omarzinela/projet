@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include_once '../composant/bddConn.inc.php';
 
 $stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Tel, Pass) values (?, ?, ?, ?, ?)");
-$stmt->bind_param($Nom, $Prenom, $Email, $Numero, $Password);
+$stmt->bind_param('sssss',$Nom, $Prenom, $Email, $Numero, $Password);
 if (!$stmt->execute()) {
     echo "Echec exécution requête: " . $stmt->error;
 }
