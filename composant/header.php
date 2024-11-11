@@ -16,7 +16,7 @@
     <div class="container">
         <header class="">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <a class="navbar-brand" href="index.php">
+                <a class="navbar-brand" href="accueil.php">
                     <!-- <img src="img/Logo_bannière.png" alt=""> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
