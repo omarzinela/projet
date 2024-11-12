@@ -1,4 +1,3 @@
-<?php include_once 'composant/header.php' ;?>
 <?php include_once 'composant/header.php'; ?>
 
 <ul class="list-group list-group-flush flex-row border rounded mt-2">
@@ -27,5 +26,4 @@
 </ul>
 
 
-<?php include_once 'composant/footer.php'; ?>
 <?php include_once 'composant/footer.php';?>
