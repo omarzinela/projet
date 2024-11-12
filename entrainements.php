@@ -1,12 +1,12 @@
 <?php
 include_once 'composant/header.php';
-require_once 'bddConn.inc.php';
+require_once 'composant/bddConn.inc.php';
 
 $res = $conn->query("select * from Entrainements");
 if (!$res) :
     echo 'Échec requête: ' . $conn->error;
 elseif ($res->num_rows == 0) :
-    echo '<p>Aucunes courses dans la bdd</p>';
+    echo '<p>Aucunes course dans la bdd</p>';
 else :
     while ($row = $res->fetch_assoc()) :
 ?>
@@ -27,7 +27,7 @@ else :
     </li>
     <div class="box mt-4" style="margin-left: auto;">
         <div class="div" style="margin-left: auto;">
-            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="" style="width: 300px;">
+            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" style="width: 300px;">
         </div>
     </div>
 </ul>;
