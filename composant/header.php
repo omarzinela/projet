@@ -12,7 +12,7 @@
 
     <title>RUNNINESIGELEC</title>
 </head>
-
+<?php session_start(); ?>
 <body>
     <div class="container-fluid">
         <header class="">

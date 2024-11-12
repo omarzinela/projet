@@ -1,9 +1,11 @@
-<?php include_once 'composant/header.php' ;?>
+<?php include_once 'composant/header.php';?>
 
 
 <div class="row">
   <img src="img/banniere_accueil.png" alt="banniere">
 </div>
+
+<?php include_once 'composant/notification.php';?>
 
 <ul class="list-group list-group-flush flex-row rounded mt-2">
 
