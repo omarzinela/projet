@@ -56,7 +56,7 @@
         </div>
     </div>
     
-    <button type="submit" class="btn btn-color mb-2">Ajouter un entraînement/button>
+    <button type="submit" class="btn btn-color mb-2">Ajouter un entraînement </button>
 
 </form>
 
