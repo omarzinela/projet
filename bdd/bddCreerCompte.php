@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Récupérer les valeurs du form
@@ -15,10 +15,11 @@ require_once '../composant/bddConn.inc.php';
 $stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Tel, Pass) values (?, ?, ?, ?, ?)");
 $stmt->bind_param('sssss',$Nom, $Prenom, $Email, $Numero, $Password);
 if (!$stmt->execute()) {
-    echo "Échec exécution requête: " . $stmt->error;
+    $_SESSION["Msg"] = "Échec exécution requête: " . $stmt->error;
+} else {
+    $_SESSION["Msg"] = "Création de compte réussie!";
 }
 
 // Closing the connection.
 $conn->close();
-// todo: Notifier de création de compte réussie et automatiquement connecter l'utilisateur.(vérifier email unique/erreur db avant)
 header('Location: '."../index.php");
