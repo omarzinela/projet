@@ -5,3 +5,6 @@ header{
     background-color: red !important;
     color: white !important;
 }
+main {
+    min-height: 600px;
+}
