@@ -13,12 +13,7 @@
             <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Votre Prenom">
         </div>
     </div>
-    <div class="form-group row  mt-3">
-        <label for="Numero" class="col-sm-2 col-form-label">Numero :</label>
-        <div class="col-sm-10">
-            <input type="tel" class="form-control" id="Numero" name="Numero" placeholder="Votre Numero">
-        </div>
-    </div>
+    
 
     <div class="form-group row  mt-3">
         <label for="Email" class="col-sm-2 col-form-label">Email</label>
