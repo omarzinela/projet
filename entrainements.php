@@ -19,18 +19,18 @@ else :
             <li>' <?php echo $row['Categorie'] ?> '</li>
             <li>' <?php echo $row['Description'] ?> '</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+    <div class="bottom" style="position: absolute;bottom: 0;">
         <form action="bdd/inscription.php" method = "POST">
             <button type="submit" name="EntrainementId" value=" <?php echo $row['EntrainementId'] ?> " class="btn btn-color mb-2">S'inscrire</button>
         </form>
-        </div
+    </div>
     </li>
     <div class="box mt-4" style="margin-left: auto;">
         <div class="div" style="margin-left: auto;">
             <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" style="width: 300px;">
         </div>
     </div>
-</ul>;
+</ul>
 
 <?php endwhile;
 endif;
