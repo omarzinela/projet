@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="img/logo-reshaped.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-
     <title>RUNNINESIGELEC</title>
 </head>
 
@@ -29,32 +27,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.php">Accueil</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="entrainements.php">Entraînements</a>
+                            <a class="nav-link" href="entrainements.php">Entraînements</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="historique.php">Historique des entraînements</a>
-                        </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="a_propos.php">À propos de nous</a>
                         </li>
-                       
                     </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Se déconnecter</a>
+                            <a class="nav-link" href="creer_compte.php">Créer un compte</a>
                         </li>
-                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="se_connecter.php">Se Connecter</a>
+                        </li>
                     </ul>
 
                 </div>
             </nav>
-        </header>
-        <main style="
+        </header>        <main style="
     min-height: 600px;
 ">
