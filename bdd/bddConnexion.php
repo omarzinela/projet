@@ -23,7 +23,7 @@ if (!$stmt->execute()) {
 } else {
     $stmt->store_result();
     if ($stmt->num_rows() == 0) {
-        $_SESSION['Msg'] = 'Informations de connection invalides!';
+        $_SESSION['Msg'] = 'Informations de connexion invalides!';
         $redirUrl = "../se_connecter.php";
     }
     else {
@@ -36,7 +36,7 @@ if (!$stmt->execute()) {
             $redirUrl = "../index.php";
 
         } else {
-            $_SESSION['Msg'] = 'Informations de connection invalides!';
+            $_SESSION['Msg'] = 'Informations de connexion invalides!';
             $redirUrl = "../se_connecter.php";
         }
     }
