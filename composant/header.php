@@ -33,9 +33,20 @@
                         <li class="nav-item">
                             <a class="nav-link " href="entrainements.php">Entraînements</a>
                         </li>
+
+                                                                <!-- si membre ou admin de l'asso -->
                         <li class="nav-item">
                             <a class="nav-link active" href="historique.php">Historique des entraînements</a>
                         </li>
+
+                                        <!-- si admin de l'asso -->
+                                        <li class="nav-item">
+                            <a class="nav-link active" href="ajouter_entrainement.php">Ajouter un entraînement</a>
+                        </li>
+
+                                         
+
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="a_propos.php">À propos de nous</a>
@@ -44,7 +55,15 @@
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0">
 
-
+                     <!-- si visiteur -->
+                     <li class="nav-item">
+                            <a class="nav-link" href="se_connecter.php">Se connecter</a>
+                        </li> 
+                        <!-- si visiteur -->
+                     <li class="nav-item">
+                            <a class="nav-link" href="creer_compte.php">Créer un compte</a>
+                        </li>                   
+                    <!-- si admin ou membre -->
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Se déconnecter</a>
                         </li>
@@ -54,7 +73,3 @@
                 </div>
             </nav>
         </header>
-        <main style="
-    min-height: 600px;
-">
-<?php session_start()?>
