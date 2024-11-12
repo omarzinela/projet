@@ -10,15 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Password = password_hash($_REQUEST['Password'], PASSWORD_BCRYPT);
 }
 
-include_once '../composant/bddConn.inc.php';
+require_once '../composant/bddConn.inc.php';
 
 $stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Tel, Pass) values (?, ?, ?, ?, ?)");
 $stmt->bind_param('sssss',$Nom, $Prenom, $Email, $Numero, $Password);
 if (!$stmt->execute()) {
-    echo "Echec exécution requête: " . $stmt->error;
+    echo "Échec exécution requête: " . $stmt->error;
 }
 
 // Closing the connection.
 $conn->close();
-
+// todo: Notifier de création de compte réussie et automatiquement connecter l'utilisateur.(vérifier email unique/erreur db avant)
 header('Location: '."../index.php");
