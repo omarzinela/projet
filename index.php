@@ -1,5 +1,4 @@
 <?php include_once 'composant/header.php' ;?>
-<?php include_once 'composant/header.php'; ?>
 
 
 <div class="row">
@@ -143,10 +142,5 @@
 </div>
 
 <ul class="list-group list-group-flush flex-row border rounded mt-2">
-
-
-
-
-
 
   <?php include_once 'composant/footer.php'; ?>
