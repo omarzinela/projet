@@ -12,7 +12,7 @@ else :
 ?>
 
 <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item" style="width: 290px; height: 250px;">' <?php echo $row['EntrainementNom'] ?> :
+    <li class="list-group-item" style="width: 290px; height: 250px;"> <?php echo $row['EntrainementNom'] ?> :
         <ul>
             <li> <?php echo date('Y/m/d',$row['EntrainementTimestamp']) ?> </li>
             <li>' <?php echo date('H:i',$row['EntrainementTimestamp']) ?> '</li>
