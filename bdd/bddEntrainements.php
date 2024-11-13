@@ -1,5 +1,5 @@
 <?php 
-require_once '../composant/bddConn.inc.php';
+require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 
 if(isset($_SESSION['UtilisateurId'])) {
     $stmt = $conn->prepare("select EntrainementId from Inscriptions where UtilisateurId = ?");

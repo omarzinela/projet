@@ -1,7 +1,7 @@
 <?php
 include_once 'composant/header.php';
 include_once 'composant/notification.php';
-require_once 'composant/bddEntrainements.php';
+require_once 'bdd/bddEntrainements.php';
 
 if (!$res) :
     $_SESSION["Msg"] = '<p>Échec requête: ' . $conn->error . '</p>';
@@ -22,6 +22,7 @@ else :
     <div class="bottom" style="position: absolute;bottom: 0;">
         <form action="bdd/inscriptionCourse.php" method = "POST">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" <?php if (in_array($row['EntrainementId'],array_column($inscriptions,'EntrainementId'),true)){ ?> disabled <?php   } ?> class="btn btn-color mb-2">S'inscrire</button>
+            <!-- todo: remplacer par un switch inscription/désinscription -->
         </form>
     </div>
     </li>

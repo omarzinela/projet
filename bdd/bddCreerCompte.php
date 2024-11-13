@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Password = password_hash($_REQUEST['Password'], PASSWORD_BCRYPT);
 }
 
-require_once '../composant/bddConn.inc.php';
+require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 
 $stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Pass) values (?, ?, ?, ?)");
 $stmt->bind_param('ssss',$Nom, $Prenom, $Email, $Password);

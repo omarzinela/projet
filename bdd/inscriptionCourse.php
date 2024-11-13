@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../composant/bddConn.inc.php';
+require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $EntrainementId = $_REQUEST['EntrainementId'];
