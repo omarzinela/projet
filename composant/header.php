@@ -34,15 +34,18 @@
                             <a class="nav-link " href="entrainements.php">Entraînements</a>
                         </li>
 
-                                                                <!-- si membre ou admin de l'asso -->
+                        <!-- si membre ou admin de l'asso -->
+                        <?php if(isset($_SESSION['UtilisateurId'])): ?>
                         <li class="nav-item">
                             <a class="nav-link active" href="historique.php">Historique des entraînements</a>
                         </li>
-
-                                        <!-- si admin de l'asso -->
-                                        <li class="nav-item">
+                        <?php endif; 
+                        if(@$_SESSION['EstAdmin']): ?>
+                        <!-- si admin de l'asso -->
+                        <li class="nav-item">
                             <a class="nav-link active" href="ajouter_entrainement.php">Ajouter un entraînement</a>
                         </li>
+                        <?php endif; ?>
 
                                          
 
@@ -54,19 +57,21 @@
                        
                     </ul>
                     <ul class="navbar-nav mb-2 mb-lg-0">
-
                      <!-- si visiteur -->
-                     <li class="nav-item">
+                     <?php if(!isset($_SESSION['UtilisateurId'])) :?>
+                        <li class="nav-item">
                             <a class="nav-link" href="se_connecter.php">Se connecter</a>
                         </li> 
-                        <!-- si visiteur -->
-                     <li class="nav-item">
-                            <a class="nav-link" href="creer_compte.php">Créer un compte</a>
-                        </li>                   
-                    <!-- si admin ou membre -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Se déconnecter</a>
+                            <a class="nav-link" href="creer_compte.php">Créer un compte</a>
+                        </li> 
+                        <!-- si admin ou membre -->
+                        <?php else: ?>                  
+                        <li class="nav-item">
+                            <a class="nav-link" href="bdd/deconnexion.php">Se déconnecter</a>
                         </li>
+                        <?php endif;?>
                        
                     </ul>
 
