@@ -8,3 +8,14 @@ header{
 main {
     min-height: 600px;
 }
+.a_propos_paragraphe{
+position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+.texte_a_propos{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    }
