@@ -19,3 +19,16 @@ position: absolute;
     text-align: center;
     margin: auto;
     }
+
+.alert {
+animation: fadeOut 5s forwards;
+      }
+      
+      @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; display: none; }
+      }
+
+.class_footer {
+      min-height: 700px;
+}

@@ -78,6 +78,4 @@
                 </div>
             </nav>
         </header>
-        <main style="
-    min-height: 700px;
-">
+        <main class="class_footer">
