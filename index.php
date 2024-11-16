@@ -1,7 +1,7 @@
 <?php include_once 'composant/header.php'; ?>
 
 <div class="row">
-  <img src="img/banniere_accueil.png" alt="banniere">
+  <img src="img/banniere_accueil.png" alt="bannière">
 </div>
 
 <?php include_once 'composant/notification.php'; ?>
@@ -28,7 +28,7 @@
     <?php 
     $firstelm = true; // Initial setting to ensure the first item gets the 'active' class
     while ($row = $res->fetch_assoc()) : ?>
-      <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; $firstelm = ''; ?>">
+      <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; unset($firstelm); ?>">
 
         <ul class="list-group list-group-flush flex-row border rounded mt-2">
           <li class="list-group-item d-flex flex-column class_entrainement">
