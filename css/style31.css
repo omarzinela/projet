@@ -32,3 +32,12 @@ animation: fadeOut 5s forwards;
 .class_footer {
       min-height: 700px;
 }
+.img_a_propos {
+    margin-right: 100px;
+}
+.div_auto{
+    margin-left: auto;
+}
+.img_position_300px{
+    width: 300px;
+}

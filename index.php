@@ -16,8 +16,8 @@
   </p>
 
 
-  <div class="box mt-4" style="margin-left: auto;">
-    <div class="div" style="margin-left: auto;">
+  <div class="box mt-4 div_auto">
+    <div class="div div_auto">
       <img style="
     margin-right: 100px;
 " src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="">
@@ -47,7 +47,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
     <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item" style="width: 290px; height: 250px;">Entraînement 3:
+    <li class="list-group-item class_entrainement">Entraînement 3:
         <ul>
         <li>Date</li>
         <li>Heure</li>
@@ -64,8 +64,8 @@
         </div>
 
     </li>
-    <div class="box mt-4" style="margin-left: auto;">
-        <div class="div" style="margin-left: auto;">
+    <div class="box mt-4 div_auto">
+        <div class="div div_auto">
             <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
 ">
         </div>
@@ -77,7 +77,7 @@
     <div class="carousel-item">
 
     <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item" style="width: 290px; height: 250px;">Entraînement 1:
+    <li class="list-group-item class_entrainement">Entraînement 1:
         <ul>
         <li>Date</li>
         <li>Heure</li>
@@ -94,8 +94,8 @@
         </div>
 
     </li>
-    <div class="box mt-4" style="margin-left: auto;">
-        <div class="div" style="margin-left: auto;">
+    <div class="box mt-4 div_auto">
+        <div class="div div_auto">
             <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
 ">
         </div>
@@ -105,7 +105,7 @@
   </div>
     <div class="carousel-item">
 <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item" style="width: 290px; height: 250px;">Entraînement 2:
+    <li class="list-group-item class_entrainement">Entraînement 2:
         <ul>
         <li>Date</li>
         <li>Heure</li>
@@ -122,8 +122,8 @@
         </div>
 
     </li>
-    <div class="box mt-4" style="margin-left: auto;">
-        <div class="div" style="margin-left: auto;">
+    <div class="box mt-4 div_auto">
+        <div class="div div_auto">
             <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
 ">
         </div>
