@@ -26,7 +26,7 @@ else :
         </ul>
         </div>
     </li>
-        <?php if (isset($_SESSION['UtilisateurId'])): ?>
+    <?php if (isset($_SESSION['UtilisateurId'])): ?>
     <div class="mt-auto">
         <form action="bdd/inscriptionCourse.php" method = "POST">
         <?php if (in_array($row['EntrainementId'],array_column($inscriptions,'EntrainementId'),true)): ?>
@@ -36,6 +36,7 @@ else :
             <input type="hidden" name="btnState" value="create">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
         <?php endif;?>
+        <input type="hidden" name="source" value="../entrainements.php">
         </form>
     </div>
     <?php endif;?>
