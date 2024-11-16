@@ -48,7 +48,7 @@
   <?php while ($row = $res->fetch_assoc()) : ?>
     <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; $firstelm = ''; ?>">
     <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item d-flex flex-column" style="width: 290px; height: 250px;">
+    <li class="list-group-item d-flex flex-column class_entrainement">
         <div>
         <?php echo $row['EntrainementNom']; ?> :
         <ul class="mb-0">
@@ -60,18 +60,17 @@
             <li> <?php echo $row['Categorie']; ?> </li>
             <li> <?php echo $row['Description']; ?> </li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class=img_course>
         </div>
     </div>
 
@@ -89,10 +88,10 @@
         <li>Catégorie</li>
         <li>Description</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
@@ -100,8 +99,7 @@
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
         </div>
     </div>
 </ul>
@@ -116,10 +114,10 @@
         <li>Catégorie</li>
         <li>Description</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
@@ -127,8 +125,7 @@
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
         </div>
     </div>
 

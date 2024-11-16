@@ -1,7 +1,7 @@
 <?php include_once 'composant/header.php'; ?>
 
 <form>
-    <div class="form-group row mt-3">
+<div class="form-group row mt-3">
         <label for="nom_entraînement" class="col-sm-2 col-form-label">Nom de l'entraînement :</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="nom_entraînement" placeholder="Nom de l'entraînement" required>
