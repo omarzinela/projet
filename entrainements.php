@@ -12,7 +12,7 @@ else :
 ?>
 
 <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item class_entrainement"> <?php echo $row['EntrainementNom']; ?> :
+    <li class="list-group-item" style="width: 290px; height: 250px;"> <?php echo $row['EntrainementNom']; ?> :
         <ul>
         <?php if (isset($_SESSION['UtilisateurId'])): ?>
             <li> <?php echo date('Y/m/d',$row['EntrainementTimestamp']); ?> </li>
@@ -22,24 +22,21 @@ else :
             <li> <?php echo $row['Categorie']; ?> </li>
             <li> <?php echo $row['Description']; ?> </li>
         </ul>
-<<<<<<< HEAD
-    <div class="bottom boutton_position">
-=======
         <?php if (isset($_SESSION['UtilisateurId'])): ?>
     <div class="bottom" style="position: absolute;bottom: 0;">
->>>>>>> f9dc842c0bf4b0e91b010ce2574201dd3725914e
         <form action="bdd/inscriptionCourse.php" method = "POST">
         <?php if (in_array($row['EntrainementId'],array_column($inscriptions,'EntrainementId'),true)): ?>
-            <input type="hidden" name="btnState" value="delete"/>
+            <input type="hidden" name="btnState" value="delete">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">Se désinscrire</button>
         <?php else: ?>
-            <input type="hidden" name="btnState" value="create"/>
+            <input type="hidden" name="btnState" value="create">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
         <?php endif;?>
+        <input type="hidden" name="source" value="../entrainements.php">
         </form>
     </div>
     <?php endif;?>
-    </li>
+
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
             <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_position_300px">
