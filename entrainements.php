@@ -28,7 +28,7 @@ else :
         <?php if (in_array($row['EntrainementId'],array_column($inscriptions,'EntrainementId'),true)): ?>
             <input type="hidden" name="btnState" value="delete">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">Se désinscrire</button>
-        <?php else: ?>
+        <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
             <input type="hidden" name="btnState" value="create">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
         <?php endif;?>
