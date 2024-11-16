@@ -15,3 +15,10 @@ if(isset($_SESSION['UtilisateurId'])) {
 }
 
 $res = $conn->query("select * from Entrainements");
+$nbInscrTab = $conn->query("select EntrainementId, count(UtilisateurId) from Inscriptions group by EntrainementId");
+
+// Conversion en associative array simple
+$nbParti = [];
+foreach ($nbInscrTab->fetch_all(MYSQLI_ASSOC) as $part) {
+    $nbParti[$part['EntrainementId']] = $part['count(UtilisateurId)'];
+}
