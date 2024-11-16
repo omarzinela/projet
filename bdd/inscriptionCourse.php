@@ -4,16 +4,24 @@ require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $EntrainementId = $_REQUEST['EntrainementId'];
+    $btnState = $_REQUEST['btnState'];
 }
 $time = time();
 
-$stmt = $conn->prepare("insert into Inscriptions (UtilisateurId, EntrainementId, InscriptionTimestamp) values (?, ?, ?)");
-$stmt->bind_param('ssi',$_SESSION['UtilisateurId'], $EntrainementId, $time);
+if(strcmp($btnState, "create") == 0){
+    $stmt = $conn->prepare("insert into Inscriptions (UtilisateurId, EntrainementId, InscriptionTimestamp) values (?, ?, ?)");
+    $stmt->bind_param('ssi',$_SESSION['UtilisateurId'], $EntrainementId, $time);
+    $msg = "Inscription réussie!";
+} else {
+    $stmt = $conn->prepare("delete from Inscriptions where EntrainementID = ? and UtilisateurId = ?");
+    $stmt->bind_param('ss', $EntrainementId, $_SESSION["UtilisateurId"]);
+    $msg = "Désinscription réussie!";
+}
 
 if (!$stmt->execute()) {
-    $_SESSION['Msg'] = "Échec exécution requête: " . $stmt->error;
+    $_SESSION['Err'] = "Échec exécution requête: " . $stmt->error;
 } else {
-    $_SESSION['Msg'] = "Inscription réussie!";
+    $_SESSION['Msg'] = $msg;
 }
 
 // Closing the connection.

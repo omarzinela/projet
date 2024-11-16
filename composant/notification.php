@@ -1,19 +1,27 @@
 <?php if (isset($_SESSION['Msg'])): ?>
 <div class="alert alert-success" role="alert">
-  Ceci est une alerte de succès.
+  <?php echo $_SESSION['Msg'];
+  unset($_SESSION['Msg']); ?>
 </div>
-
-<div class="alert alert-danger" role="alert">
-  Ceci est une alerte de danger.
-</div>
-
-<div class="alert alert-warning" role="alert">
-  Ceci est une alerte de mise en garde.
-</div>
-
-<div class="alert alert-info" role="alert">
-  Ceci est une alerte d'information.
-</div>
-
-<?php echo $_SESSION['Msg']; // todo: faire une notification jolie avec bootstrap en insérant cette ligne (moins le commentaire) dans le html ?>
 <?php endif;?>
+
+<?php if (isset($_SESSION['Err'])): ?>
+<div class="alert alert-danger" role="alert">
+<?php echo $_SESSION['Err'];
+  unset($_SESSION['Err']); ?>
+</div>
+<?php endif;?>
+
+<?php if (isset($_SESSION['Warn'])): ?>
+<div class="alert alert-warning" role="alert">
+<?php echo $_SESSION['Warn'];
+  unset($_SESSION['Warn']); ?>
+</div>
+<?php endif;?>
+
+<?php if (isset($_SESSION['Info'])): ?>
+<div class="alert alert-info" role="alert">
+<?php echo $_SESSION['Info'];
+  unset($_SESSION['Info']); ?>
+</div>
+<?php endif;

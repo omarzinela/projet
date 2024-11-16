@@ -14,7 +14,7 @@ require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 $stmt = $conn->prepare("insert into Utilisateurs (Nom, Prenom, Mail, Pass) values (?, ?, ?, ?)");
 $stmt->bind_param('ssss',$Nom, $Prenom, $Email, $Password);
 if (!$stmt->execute()) {
-    $_SESSION["Msg"] = "Échec exécution requête: " . $stmt->error;
+    $_SESSION["Err"] = "Échec exécution requête: " . $stmt->error;
 } else {
     $_SESSION["Msg"] = "Création de compte réussie!";
 }

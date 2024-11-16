@@ -12,18 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if (!($stmt = $conn->prepare("select UtilisateurId, Pass, EstAdmin from Utilisateurs where Mail = ?"))) {
-    $_SESSION['Msg'] = "Echec de la préparation : (" . $conn->errno . ") " . $conn->error;
+    $_SESSION['Err'] = "Echec de la préparation : (" . $conn->errno . ") " . $conn->error;
 }
 $stmt->bind_param('s', $Email);
 
 if (!$stmt->execute()) {
-    $_SESSION['Msg'] = "Échec exécution requête: " . $stmt->error;
+    $_SESSION['Err'] = "Échec exécution requête: " . $stmt->error;
     $redirUrl = "../se_connecter.php";
 
 } else {
     $stmt->store_result();
     if ($stmt->num_rows() == 0) {
-        $_SESSION['Msg'] = 'Informations de connexion invalides!';
+        $_SESSION['Warn'] = 'Informations de connexion invalides!';
         $redirUrl = "../se_connecter.php";
     }
     else {
@@ -36,7 +36,7 @@ if (!$stmt->execute()) {
             $redirUrl = "../index.php";
 
         } else {
-            $_SESSION['Msg'] = 'Informations de connexion invalides!';
+            $_SESSION['Warn'] = 'Informations de connexion invalides!';
             $redirUrl = "../se_connecter.php";
         }
     }
