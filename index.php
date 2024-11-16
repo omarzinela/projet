@@ -9,39 +9,23 @@
 
 <ul class="list-group list-group-flush flex-row rounded mt-2">
 
-  <p style=" align-items: center;
-        text-align: center;
-        margin: auto;"> Le but de notre association est de partager des bons moments, faire des rencontres et faire un bon sport.
-
-  </p>
-
-
-  <div class="box mt-4 div_auto">
-    <div class="div div_auto">
-      <img style="
-    margin-right: 100px;
-" src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="">
-    </div>
-  </div>
-
-</ul>
-<br>
-
-<!-- <p> Bienvenue sur le site officiel de notre association de running d'ESIGELEC ! Que vous soyez coureur débutant ou athlète chevronné, notre
+  <p class="texte_a_propos"> Bienvenue sur le site officiel de notre association de running d'ESIGELEC ! Que vous soyez coureur débutant ou athlète chevronné, notre
            communauté est l'endroit idéal pour partager votre passion, vous dépasser et tisser des liens avec d'autres passionnés de la course à 
            pied. Nous organisons régulièrement des sessions d'entraînement adaptées à tous les niveaux ainsi que des événements spéciaux pour 
            célébrer notre amour commun du sport et du bien-être. Rejoignez-nous pour découvrir des parcours variés, relever de nouveaux défis, et 
            faire partie d'une équipe dynamique et motivée. N'attendez plus, venez courir avec nous et faites partie de l'aventure !
 
   </p>
-  <div class="box mt-4" style="margin-left: auto;">
-        <div class="div" style="margin-left: auto;">
-            <img src=img\pexels-bohlemedia-2803158.jpg alt="" style="width: 300px;
-">
-        </div>
-    </div> -->
 
 
+  <div class="box mt-4 div_auto">
+    <div class="div div_auto">
+      <img class="img_position_300px" src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="">
+    </div>
+  </div>
+
+</ul>
+<br>
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
@@ -55,10 +39,10 @@
         <li>Catégorie</li>
         <li>Description</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php" class="btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
@@ -66,8 +50,7 @@
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
         </div>
     </div>
 
@@ -85,10 +68,10 @@
         <li>Catégorie</li>
         <li>Description</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php" class="btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
@@ -96,8 +79,7 @@
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
         </div>
     </div>
 
@@ -113,10 +95,10 @@
         <li>Catégorie</li>
         <li>Description</li>
         </ul>
-        <div class="bottom" style="position: absolute;bottom: 0;">
+        <div class="bottom boutton_position">
             <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
             <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" style="color: white; text-decoration:none;"> Plus d'informations
+                <a href="information.php" class="btn_lien"> Plus d'informations
                 </a>
             </button>
         </div>
@@ -124,8 +106,7 @@
     </li>
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
-">
+            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
         </div>
     </div>
 

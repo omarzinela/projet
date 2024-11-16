@@ -5,7 +5,7 @@ header{
     background-color: red !important;
     color: white !important;
 }
-main {
+main{
     min-height: 600px;
 }
 .a_propos_paragraphe{
@@ -20,19 +20,19 @@ position: absolute;
     margin: auto;
     }
 
-.alert {
+.alert{
 animation: fadeOut 5s forwards;
       }
       
-      @keyframes fadeOut {
+      @keyframes fadeOut{
         0% { opacity: 1; }
         100% { opacity: 0; display: none; }
       }
 
-.class_footer {
+.class_footer{
       min-height: 700px;
 }
-.img_a_propos {
+.img_a_propos{
     margin-right: 100px;
 }
 .div_auto{
@@ -40,4 +40,19 @@ animation: fadeOut 5s forwards;
 }
 .img_position_300px{
     width: 300px;
+}
+.class_entrainement{
+    width: 290px; height: 250px;
+}
+.abs_bottom{
+    position: absolute;bottom: 0;
+}
+.btn_lien{
+    color: white; text-decoration:none;
+}
+.img_course{
+    width: 300px;
+}
+.boutton_position{
+    position: absolute;bottom: 0;
 }
