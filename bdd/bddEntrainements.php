@@ -14,7 +14,7 @@ if(isset($_SESSION['UtilisateurId'])) {
     $inscriptions = array();
 }
 
-$res = $conn->query("select * from Entrainements");
+$res = $conn->query("select * from Entrainements where EntrainementTimestamp > unix_timestamp() order by EntrainementTimestamp");
 $nbInscrTab = $conn->query("select EntrainementId, count(UtilisateurId) from Inscriptions group by EntrainementId");
 
 // Conversion en associative array simple
