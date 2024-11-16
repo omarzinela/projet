@@ -17,8 +17,8 @@
         </div>
 
     </li>
-    <div class="box mt-4" style="margin-left: auto;">
-        <div class="div" style="margin-left: auto;">
+    <div class="box mt-4 div_auto">
+        <div class="div div_auto">
             <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" style="width: 300px;
 ">
         </div>
