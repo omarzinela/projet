@@ -49,5 +49,6 @@ else :
 </ul>
 
 <?php endwhile;
+$conn->close();
 endif;
 include_once 'composant/footer.php';
