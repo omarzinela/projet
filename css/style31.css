@@ -72,3 +72,8 @@ animation: fadeOut 5s forwards;
 .img_train{
     max-width:250px;
 }
+btn btn-primary{
+    background-color: red !important;
+    color: white !important;
+    margin-top: 2rem; 
+}
