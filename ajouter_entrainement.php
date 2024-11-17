@@ -1,7 +1,7 @@
 <?php include_once 'composant/header.php'; ?>
 <?php if(!@$_SESSION['EstAdmin']):
     $_SESSION['Warn'] = "Vous N'êtes pas admin!";
-    include_once('composant/notification.php');
+    header('Location: index.php');
 else:?>
 <form action="bdd/bddAjouterEntrainement.php" method="POST" enctype="multipart/form-data">
     <div class="form-group row mt-3">

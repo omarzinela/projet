@@ -3,6 +3,10 @@ include_once 'composant/header.php';
 include_once 'composant/notification.php';
 require_once 'bdd/bddHistorique.php';
 
+if (!isset($_SESSION['UtilisateurId'])) {
+    $_SESSION['Info'] = "Vous n'êtes pas connectés";
+    header('Location: index.php');
+}
 if (!$res) :
     $_SESSION["Err"] = '<p>Échec requête: ' . $conn->error . '</p>';
 elseif ($res->num_rows == 0) :

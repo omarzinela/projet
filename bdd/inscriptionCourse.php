@@ -6,6 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $EntrainementId = $_REQUEST['EntrainementId'];
     $btnState = $_REQUEST['btnState'];
     $source = $_REQUEST['source'];
+} else {
+    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 $time = time();
 

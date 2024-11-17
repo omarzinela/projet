@@ -6,7 +6,7 @@ require_once 'bdd/bddEntrainements.php';
 if (!$res) :
     $_SESSION["Err"] = '<p>Échec requête: ' . $conn->error . '</p>';
 elseif ($res->num_rows == 0) :
-    $_SESSION["Info"] = '<p>Aucunes course dans la bdd</p>';
+    $_SESSION["Info"] = '<p>Aucune course dans la bdd</p>';
 else :
     while ($row = $res->fetch_assoc()) :
 ?>

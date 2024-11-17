@@ -7,6 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Prenom = $_REQUEST['Prenom'];
     $Email = $_REQUEST['Email'];
     $Password = password_hash($_REQUEST['Password'], PASSWORD_BCRYPT);
+} else {
+    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 
 require_once dirname(__FILE__).'/../composant/bddConn.inc.php';

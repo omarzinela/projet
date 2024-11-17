@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_REQUEST['Email'];
     $Password = $_REQUEST['Password'];
 } else {
-    header('../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
+    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 
 if (!($stmt = $conn->prepare("select UtilisateurId, Pass, EstAdmin from Utilisateurs where Mail = ?"))) {
