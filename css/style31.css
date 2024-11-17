@@ -4,6 +4,7 @@ header{
 .btn-color{
     background-color: red !important;
     color: white !important;
+    margin-top: 20px;
 }
 main{
     min-height: 600px;
