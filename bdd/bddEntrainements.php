@@ -14,4 +14,11 @@ if(isset($_SESSION['UtilisateurId'])) {
     $inscriptions = array();
 }
 
-$res = $conn->query("select * from Entrainements");
+$res = $conn->query("select * from Entrainements where EntrainementTimestamp > unix_timestamp() order by EntrainementTimestamp");
+$nbInscrTab = $conn->query("select EntrainementId, count(UtilisateurId) from Inscriptions group by EntrainementId");
+
+// Conversion en associative array simple
+$nbParti = [];
+foreach ($nbInscrTab->fetch_all(MYSQLI_ASSOC) as $part) {
+    $nbParti[$part['EntrainementId']] = $part['count(UtilisateurId)'];
+}
