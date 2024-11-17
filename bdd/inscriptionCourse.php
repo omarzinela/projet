@@ -5,6 +5,7 @@ require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $EntrainementId = $_REQUEST['EntrainementId'];
     $btnState = $_REQUEST['btnState'];
+    $source = $_REQUEST['source'];
 }
 $time = time();
 
@@ -27,4 +28,4 @@ if (!$stmt->execute()) {
 // Closing the connection.
 $conn->close();
 
-header('Location: '."../entrainements.php");
+header('Location: '.$source);

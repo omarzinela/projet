@@ -26,93 +26,61 @@
 
 </ul>
 <br>
+<?php
+require_once 'bdd/bddEntrainements.php';
+
+if (!$res) :
+    $_SESSION["Err"] = '<p>Échec requête: ' . $conn->error . '</p>';
+elseif ($res->num_rows == 0) :
+    $_SESSION["Info"] = '<p>Aucunes course dans la bdd</p>';
+else :
+?>
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+  <?php while ($row = $res->fetch_assoc()) : ?>
+    <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; $firstelm = ''; ?>">
     <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item class_entrainement">Entraînement 3:
-        <ul>
-        <li>Date</li>
-        <li>Heure</li>
-        <li>Lieu</li>
-        <li>Catégorie</li>
-        <li>Description</li>
+    <li class="list-group-item d-flex flex-column" style="width: 290px; height: 250px;">
+        <div>
+        <?php echo $row['EntrainementNom']; ?> :
+        <ul class="mb-0">
+        <?php if (isset($_SESSION['UtilisateurId'])): ?>
+            <li> <?php echo date('Y/m/d',$row['EntrainementTimestamp']); ?> </li>
+            <li> <?php echo date('H:i',$row['EntrainementTimestamp']); ?> </li>
+            <li> <?php echo $row['Lieu']; ?> </li>
+        <?php endif;?>
+            <li> <?php echo $row['Categorie']; ?> </li>
+            <li> <?php echo $row['Description']; ?> </li>
         </ul>
-        <div class="bottom boutton_position">
-            <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
-            <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" class="btn_lien"> Plus d'informations
-                </a>
-            </button>
         </div>
-
     </li>
+
+    <?php if (isset($_SESSION['UtilisateurId'])): ?>
+    <div class="mt-auto">
+        <form action="bdd/inscriptionCourse.php" method = "POST">
+        <?php if (in_array($row['EntrainementId'],array_column($inscriptions,'EntrainementId'),true)): ?>
+            <input type="hidden" name="btnState" value="delete">
+            <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">Se désinscrire</button>
+        <?php else: ?>
+            <input type="hidden" name="btnState" value="create">
+            <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
+        <?php endif;?>
+        <input type="hidden" name="source" value="../index.php">
+        </form>
+    </div>
+    <?php endif;?>
+
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
+            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_course">
         </div>
     </div>
-
 </ul>
+</div>
+<?php endwhile;
+endif;?>
 
-  </div>
-    <div class="carousel-item">
-
-    <ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item class_entrainement">Entraînement 1:
-        <ul>
-        <li>Date</li>
-        <li>Heure</li>
-        <li>Lieu</li>
-        <li>Catégorie</li>
-        <li>Description</li>
-        </ul>
-        <div class="bottom boutton_position">
-            <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
-            <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" class="btn_lien"> Plus d'informations
-                </a>
-            </button>
-        </div>
-
-    </li>
-    <div class="box mt-4 div_auto">
-        <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
-        </div>
-    </div>
-
-</ul>
-  </div>
-    <div class="carousel-item">
-<ul class="list-group list-group-flush flex-row border rounded mt-2">
-    <li class="list-group-item class_entrainement">Entraînement 2:
-        <ul>
-        <li>Date</li>
-        <li>Heure</li>
-        <li>Lieu</li>
-        <li>Catégorie</li>
-        <li>Description</li>
-        </ul>
-        <div class="bottom boutton_position">
-            <button type="submit" class="btn btn-color mb-2">S'inscrire</button>
-            <button type="submit" class="btn btn-color mb-2">
-                <a href="information.php" class="btn_lien"> Plus d'informations
-                </a>
-            </button>
-        </div>
-
-    </li>
-    <div class="box mt-4 div_auto">
-        <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
-        </div>
-    </div>
-
-</ul>
-
-  </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
