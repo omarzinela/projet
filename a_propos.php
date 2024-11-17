@@ -19,7 +19,7 @@ Nous croyons que c'est grâce à l'esprit de collaboration et au respect mutuel 
 
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img class="img_position_300px" src="img/etirement.jpg" alt="">
+            <img class="img_big" src="img/etirement.jpg" alt="">
         </div>
     </div>
 

@@ -18,7 +18,7 @@
 
   <div class="box mt-4 div_auto">
     <div class="div div_auto">
-      <img class="img_position_300px" src="img\runners.jpg" alt="runner image">
+      <img class="img_big" src="img\runners.jpg" alt="runner image">
     </div>
   </div>
 </ul>

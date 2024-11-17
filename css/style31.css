@@ -45,8 +45,8 @@ animation: fadeOut 5s forwards;
 .div_auto{
     margin-left: auto;
 }
-.img_position_300px{
-    width: 600px;
+.img_big{
+    width: 650px;
 }
 .class_entrainement{
     width: 290px; height: 250px;
@@ -58,7 +58,7 @@ animation: fadeOut 5s forwards;
     color: white; text-decoration:none;
 }
 .img_course{
-    width: 300px;
+    width: 200px;
 }
 .boutton_position{
     position: absolute;bottom: 0;
