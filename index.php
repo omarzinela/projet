@@ -26,9 +26,9 @@
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <?php 
-    $firstelm = true; // Initial setting to ensure the first item gets the 'active' class
+    $firstElm = true; // Initial setting to ensure the first item gets the 'active' class
     while ($row = $res->fetch_assoc()) : ?>
-      <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; unset($firstelm); ?>">
+      <div class="carousel-item <?php if($firstElm) echo 'active'; $firstElm = false; ?>">
 
         <ul class="list-group list-group-flush flex-row border rounded mt-2">
           <li class="list-group-item d-flex flex-column class_entrainement">
