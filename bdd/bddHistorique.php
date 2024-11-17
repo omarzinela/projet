@@ -11,5 +11,5 @@ if(isset($_SESSION['UtilisateurId'])) {
     }
 } else {
     $_SESSION['Info'] = "Vous devez vous connecter pour voir l'historique de vos entraînements.";
-    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
+    header('Location:../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }

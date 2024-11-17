@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $categorie = $_REQUEST['catégorie'];
     $maxPart = $_REQUEST['participants_max'];
 } else {
-    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
+    header('Location:../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 
 $dossierCible = dirname(__FILE__)."/../uploads/";
@@ -32,4 +32,4 @@ if (!move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
     $conn->close();
 }
 
-header('Location: '."../index.php");
+header('Location:'."../index.php");

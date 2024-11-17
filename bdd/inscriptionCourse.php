@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $btnState = $_REQUEST['btnState'];
     $source = $_REQUEST['source'];
 } else {
-    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
+    header('Location:../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 $time = time();
 
@@ -30,4 +30,4 @@ if (!$stmt->execute()) {
 // Closing the connection.
 $conn->close();
 
-header('Location: '.$source);
+header('Location:'.$source);

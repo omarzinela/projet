@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_REQUEST['Email'];
     $Password = password_hash($_REQUEST['Password'], PASSWORD_BCRYPT);
 } else {
-    header('Location: ../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
+    header('Location:../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 
 require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
@@ -23,4 +23,4 @@ if (!$stmt->execute()) {
 
 // Closing the connection.
 $conn->close();
-header('Location: '."../index.php");
+header('Location:'."../index.php");
