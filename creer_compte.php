@@ -25,7 +25,7 @@
     <div class="form-group row mt-3">
         <label for="Password" class="col-12 col-sm-2 col-form-label">Mot de passe :</label>
         <div class="col-12 col-sm-10">
-            <input type="password" class="form-control" id="Password" name="Mot de passe" placeholder="Mot de passe">
+            <input type="password" class="form-control" id="Password" name="Password" placeholder="Mot de passe">
         </div>
     </div>
 
