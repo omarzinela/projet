@@ -42,7 +42,7 @@ else :
   <div class="carousel-inner">
   <?php while ($row = $res->fetch_assoc()) : ?>
     <div class="carousel-item <?php if(!isset($firstelm)) echo 'active'; $firstelm = ''; ?>">
-      <ul class="list-group list-group-flush flex-row border rounded mt-2">
+      <ul class="list-group list-group-flush flex-row border rounded mt-2 alignement">
         <li class="list-group-item d-flex flex-column class_entrainement">
           <div>
             <?php echo $row['EntrainementNom']; ?> :

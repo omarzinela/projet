@@ -77,3 +77,15 @@ btn btn-primary{
     color: white !important;
     margin-top: 2rem; 
 }
+@media (max-width: 767px) {
+    .texte_a_propos {
+    padding: 0; 
+    max-width: 100%; 
+    line-height: 1.6; 
+    font-size: 1rem; 
+    text-align: center; 
+    }
+  }
+.alignement{
+    justify-content: space-between;
+}
