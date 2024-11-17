@@ -16,11 +16,11 @@
         </div>
 
     </li>
-    <div class="box mt-4 div_auto">
+    <li> <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="" class="img_course">
+            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_course">
         </div>
-    </div>
+    </div></li>
 
 </ul>
 
