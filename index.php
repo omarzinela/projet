@@ -6,22 +6,27 @@
 
 <?php include_once 'composant/notification.php'; ?>
 
-<ul class="list-group list-group-flush flex-row rounded mt-2">
-  <p class="texte_a_propos">
-    Bienvenue sur le site officiel de notre association de running d'ESIGELEC ! Que vous soyez coureur débutant ou athlète chevronné, notre
-    communauté est l'endroit idéal pour partager votre passion, vous dépasser et tisser des liens avec d'autres passionnés de la course à
-    pied. Nous organisons régulièrement des sessions d'entraînement adaptées à tous les niveaux ainsi que des événements spéciaux pour
-    célébrer notre amour commun du sport et du bien-être. Rejoignez-nous pour découvrir des parcours variés, relever de nouveaux défis, et
-    faire partie d'une équipe dynamique et motivée. N'attendez plus, venez courir avec nous et faites partie de l'aventure !
-  </p>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Texte à gauche sur grand écran, centré sur mobile -->
+        <div class="col-12 col-md-6 mb-4">
+            <p class="texte_a_propos">
+                Bienvenue sur le site officiel de notre association de running d'ESIGELEC ! Que vous soyez coureur débutant ou athlète chevronné, notre
+                communauté est l'endroit idéal pour partager votre passion, vous dépasser et tisser des liens avec d'autres passionnés de la course à
+                pied. Nous organisons régulièrement des sessions d'entraînement adaptées à tous les niveaux ainsi que des événements spéciaux pour
+                célébrer notre amour commun du sport et du bien-être. Rejoignez-nous pour découvrir des parcours variés, relever de nouveaux défis, et
+                faire partie d'une équipe dynamique et motivée. N'attendez plus, venez courir avec nous et faites partie de l'aventure !
+            </p>
+        </div>
 
-
-  <div class="box mt-4 div_auto">
-    <div class="div div_auto">
-      <img class="img_big" src="img\runners.jpg" alt="runner image">
+        <!-- Image à droite sur grand écran, en bas du texte sur mobile -->
+        <div class="col-12 col-md-6">
+            <div class="text-center">
+                <img class="img-fluid img_accueil" src="img/runners.jpg" alt="runner image">
+            </div>
+        </div>
     </div>
-  </div>
-</ul>
+</div>
 <br>
 <?php
 require_once 'bdd/bddEntrainements.php';

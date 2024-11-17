@@ -48,7 +48,10 @@ animation: fadeOut 5s forwards;
 .img_big{
     width: 85%;
     margin-top: 5rem;
-
+}
+.img_accueil{
+    width: 85%;
+    margin-top: 2rem;
 }
 .class_entrainement{
     width: 290px; height: 250px;
