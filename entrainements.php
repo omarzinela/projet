@@ -43,7 +43,7 @@ else :
 
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_position_300px">
+            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_course">
         </div>
     </div>
 </ul>
