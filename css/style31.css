@@ -4,6 +4,7 @@ header{
 .btn-color{
     background-color: red !important;
     color: white !important;
+    margin-top: 20px;
 }
 main{
     min-height: 600px;
@@ -15,9 +16,15 @@ position: absolute;
     top: 20%;
 }
 .texte_a_propos{
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
+    padding: 20px; 
+    max-width: 800px; 
+    line-height: 1.6; 
+    font-size: 1.1rem;
     }
 
 .alert{
@@ -39,7 +46,7 @@ animation: fadeOut 5s forwards;
     margin-left: auto;
 }
 .img_position_300px{
-    width: 300px;
+    width: 600px;
 }
 .class_entrainement{
     width: 290px; height: 250px;
@@ -51,7 +58,7 @@ animation: fadeOut 5s forwards;
     color: white; text-decoration:none;
 }
 .img_course{
-    width: 300px;
+    width: 600px;
 }
 .boutton_position{
     position: absolute;bottom: 0;

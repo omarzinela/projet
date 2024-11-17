@@ -19,7 +19,7 @@ Nous croyons que c'est grâce à l'esprit de collaboration et au respect mutuel 
 
     <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="">
+            <img class="img_position_300px" src="img/etirement.jpg" alt="">
         </div>
     </div>
 

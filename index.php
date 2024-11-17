@@ -1,7 +1,7 @@
 <?php include_once 'composant/header.php'; ?>
 
 <div class="row">
-  <img src="img/banniere_accueil.png" alt="banniere">
+  <img src="img/banniere_accueil.png" alt="bannière">
 </div>
 
 <?php include_once 'composant/notification.php'; ?>
@@ -18,7 +18,7 @@
 
   <div class="box mt-4 div_auto">
     <div class="div div_auto">
-      <img class="img_position_300px" src="img/depositphotos_54892607-stock-photo-male-runner-in-san-francisco.jpg" alt="runner image">
+      <img class="img_position_300px" src="img\runners.jpg" alt="runner image">
     </div>
   </div>
 </ul>
