@@ -15,6 +15,7 @@ position: absolute;
     right: 0;
     top: 20%;
 }
+
 .texte_a_propos{
     display: flex;
     justify-content: center;
@@ -67,4 +68,7 @@ animation: fadeOut 5s forwards;
 }
 .boutton_position{
     position: absolute;bottom: 0;
+}
+.img_train{
+    max-width:250px;
 }

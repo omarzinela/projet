@@ -44,7 +44,7 @@ else :
 
   <li class="list-group-item">
   <div class="text-center">
-  <img src="<?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img-fluid rounded">
+  <img src="<?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img-fluid rounded img_train">
   </div>
   </li>
   </ul>
