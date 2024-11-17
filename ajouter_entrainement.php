@@ -1,10 +1,16 @@
 <?php include_once 'composant/header.php'; ?>
+<<<<<<< HEAD
+
+<form>
+<div class="form-group row mt-3">
+=======
 <?php if(!@$_SESSION['EstAdmin']):
     $_SESSION['Warn'] = "Vous N'êtes pas admin!";
     include_once('composant/notification.php');
 else:?>
 <form action="bdd/bddAjouterEntrainement.php" method="POST" enctype="multipart/form-data">
     <div class="form-group row mt-3">
+>>>>>>> eb20d48113036f9b85f24b85841e687f3ed0bdcc
         <label for="nom_entraînement" class="col-sm-2 col-form-label">Nom de l'entraînement :</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="nom_entraînement" name="nom" placeholder="Nom de l'entraînement" required>
