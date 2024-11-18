@@ -102,3 +102,21 @@ btn btn-primary{
 .btn-success {
     background-color: red;
 }
+.entrainement-img {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 0.5rem;
+}
+
+.card-footer {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card-footer .btn {
+    margin-bottom: 0.25rem;
+}

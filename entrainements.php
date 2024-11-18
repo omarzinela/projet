@@ -16,7 +16,9 @@ else :
         <?php while ($row = $res->fetch_assoc()) : ?>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 border rounded">
-                    <img src="<?php echo $row['EntrainementThumbnail']; ?>" alt="Miniature de l'entraînement" class="card-img-top img-fluid" style="height: 180px; object-fit: cover;">
+                    <!-- Image avec hauteur ajustée -->
+                    <img src="<?php echo $row['EntrainementThumbnail']; ?>" alt="Miniature de l'entraînement" class="card-img-top img-fluid entrainement-img">
+
                     <div class="card-body p-2">
                         <h6 class="card-title mb-1"><?php echo $row['EntrainementNom']; ?></h6>
                         <ul class="list-unstyled mb-1">
@@ -29,23 +31,27 @@ else :
                             <li class="small">Description: <?php echo $row['Description']; ?></li>
                         </ul>
                     </div>
+
                     <div class="card-footer p-2 text-center">
                         <?php if (isset($_SESSION['UtilisateurId'])): ?>
-                            <form action="bdd/inscriptionCourse.php" method="POST">
-                                <?php if (in_array($row['EntrainementId'], array_column($inscriptions, 'EntrainementId'), true)): ?>
-                                    <input type="hidden" name="btnState" value="delete">
-                                    <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-danger mb-1">Se désinscrire</button>
-                                <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
-                                    <input type="hidden" name="btnState" value="create">
-                                    <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-success mb-1">S'inscrire</button>
+                            <div class="d-flex justify-content-between">
+                                <form action="bdd/inscriptionCourse.php" method="POST" class="d-inline-block">
+                                    <?php if (in_array($row['EntrainementId'], array_column($inscriptions, 'EntrainementId'), true)): ?>
+                                        <input type="hidden" name="btnState" value="delete">
+                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-danger mb-1">Se désinscrire</button>
+                                    <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
+                                        <input type="hidden" name="btnState" value="create">
+                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-success mb-1">S'inscrire</button>
+                                    <?php endif; ?>
+                                    <input type="hidden" name="source" value="../entrainements.php">
+                                </form>
+
+                                <?php if (@$_SESSION['EstAdmin']): ?>
+                                    <form action="listeUtilisateurs.php" method="POST" class="d-inline-block">
+                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-color mb-1">Liste inscrits</button>
+                                    </form>
                                 <?php endif; ?>
-                                <input type="hidden" name="source" value="../entrainements.php">
-                            </form>
-                        <?php endif; ?>
-                        <?php if (@$_SESSION['EstAdmin']): ?>
-                            <form action="listeUtilisateurs.php" method="POST">
-                                <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-color mb-1">Liste inscrits</button>
-                            </form>
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -53,6 +59,7 @@ else :
         <?php endwhile; ?>
     </div>
 </div>
+
 
 <?php
 $conn->close();
