@@ -24,7 +24,7 @@ else:
 
             <div>
                 <?php echo $row['Nom']." ".$row['Prenom']; ?> :
-                <ul class="mb-0">
+                <ul class="list-unstyles mb-0">
                     <li> <?php echo $row['Mail']; ?> </li>
                 </ul>
             </div>
