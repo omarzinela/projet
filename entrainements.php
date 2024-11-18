@@ -39,8 +39,7 @@ else :
                         <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-danger mb-2 btn-inscrire">Se désinscrire</button>
         <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
                         <input type="hidden" name="btnState" value="create">
-            <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-success mb-2 btn-inscrire">S'inscrire</button>
-        <?php endif; ?>
+                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-success mb-2 btn-inscrire"> S'inscrire</button>        <?php endif; ?>
                          <input type="hidden" name="source" value="../entrainements.php">
             </form>
         <?php if (@$_SESSION['EstAdmin']): ?>

@@ -120,4 +120,15 @@ btn btn-primary{
 .card-footer.btn {
     margin-bottom: 0.25rem;
 }
+.btn-inscrire {
+    visibility: visible; 
+    opacity: 1;
+    color: #fff;
+    background-color: red; 
+    border: red;
+}
 
+.btn-inscrire:hover {
+    background-color: red;
+    border-color: red;
+}
