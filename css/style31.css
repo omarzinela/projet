@@ -132,3 +132,13 @@ btn btn-primary{
     background-color: red;
     border-color: red;
 }
+.button-container {
+    display: flex; 
+    gap: 10px; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.button-container .btn {
+    flex: 0 0 auto; 
+}
