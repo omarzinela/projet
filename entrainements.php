@@ -42,7 +42,6 @@ else :
                             <input type="hidden" name="btnState" value="create">
                             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-success mb-2 btn-inscrire"> S'inscrire</button>
                             <?php endif; ?>
-                             <input type="hidden" name="source" value="../entrainements.php">
                         </form>
                         <?php if (@$_SESSION['EstAdmin']): ?>
                             <form action="listeUtilisateurs.php" method="POST" class="d-inline-block">
