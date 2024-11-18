@@ -9,9 +9,7 @@ elseif ($res->num_rows == 0) :
     $_SESSION["Info"] = '<p>Aucune course dans la bdd</p>';
 else :
     $_SESSION['source'] = '../entrainements.php';
-    while ($row = $res->fetch_assoc()) :
 ?>
-
 
 <div class="container mt-4">
     <div class="row g-4">
@@ -45,13 +43,20 @@ else :
                             </form>
                         </div>
                     <?php endif; ?>
+                    <?php if (@$_SESSION['EstAdmin']): ?>
+                        <div>
+                            <form action="listeUtilisateurs.php" method = "POST">
+                                <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-color mb-2">Liste inscrits</button>
+                            </form>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endwhile; ?>
     </div>
 </div>
 
-<?php endwhile;
+<?php
 $conn->close();
 endif;
 include_once 'composant/footer.php';
