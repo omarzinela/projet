@@ -11,7 +11,7 @@ if (!$res) :
     $_SESSION["Err"] = '<p>Échec requête: ' . $conn->error . '</p>';
     header('Location:index.php');
 elseif ($res->num_rows == 0) :
-    $_SESSION["Info"] = '<p>Aucunes course dans la bdd</p>';
+    $_SESSION["Info"] = "<p>Aucunes course dans l'historique'</p>";
     header('Location:index.php');
 else :
     while ($row = $res->fetch_assoc()) :
