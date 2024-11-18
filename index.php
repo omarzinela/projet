@@ -4,7 +4,8 @@
   <img src="img/banniere_accueil.png" alt="bannière">
 </div>
 
-<?php include_once 'composant/notification.php'; ?>
+<?php include_once 'composant/notification.php'; 
+$_SESSION['source'] = '../index.php'?>
 
 <div class="container mt-4">
     <div class="row">
@@ -68,7 +69,6 @@ else :
             <input type="hidden" name="btnState" value="create">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
         <?php endif;?>
-        <input type="hidden" name="source" value="../index.php">
         </form>
     </div>
     <?php endif;?>

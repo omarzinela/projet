@@ -8,6 +8,7 @@ if (!$res) :
 elseif ($res->num_rows == 0) :
     $_SESSION["Info"] = '<p>Aucune course dans la bdd</p>';
 else :
+    $_SESSION['source'] = '../entrainements.php';
     while ($row = $res->fetch_assoc()) :
 ?>
 
@@ -36,7 +37,6 @@ else :
             <input type="hidden" name="btnState" value="create">
             <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">S'inscrire</button>
         <?php endif;?>
-        <input type="hidden" name="source" value="../entrainements.php">
         </form>
     </div>
     <?php endif;?>
