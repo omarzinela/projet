@@ -117,6 +117,7 @@ btn btn-primary{
     text-align: center;
 }
 
-.card-footer .btn {
+.card-footer.btn {
     margin-bottom: 0.25rem;
 }
+
