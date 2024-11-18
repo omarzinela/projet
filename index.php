@@ -9,7 +9,6 @@ $_SESSION['source'] = '../index.php'?>
 
 <div class="container mt-4">
     <div class="row">
-        <!-- Texte à gauche sur grand écran, centré sur mobile -->
         <div class="col-12 col-md-6 mb-4">
             <p class="texte_a_propos">
                 Bienvenue sur le site officiel de notre association de running d'ESIGELEC ! Que vous soyez coureur débutant ou athlète chevronné, notre
@@ -20,7 +19,6 @@ $_SESSION['source'] = '../index.php'?>
             </p>
         </div>
 
-        <!-- Image à droite sur grand écran, en bas du texte sur mobile -->
         <div class="col-12 col-md-6">
             <div class="text-center">
                 <img class="img-fluid img_accueil" src="img/runners.jpg" alt="runner image">
@@ -74,7 +72,7 @@ else :
     <?php endif;?>
           <li> <div class="box mt-4 div_auto">
         <div class="div div_auto">
-            <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_course">
+        <img src="<?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img-fluid img_entrainement">
         </div>
     </div></li>
    

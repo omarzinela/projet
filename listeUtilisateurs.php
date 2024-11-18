@@ -16,21 +16,20 @@ else:
         $_SESSION["Info"] = '<p>Aucun utilisateur dans la bdd</p>';
         header('Location:'.substr($_SESSION['source'],3)); // Offset pour retirer le ../
     else :
-        while ($row = $res->fetch_assoc()) : // Créer les éléments de la liste dans une boucle depuis la bdd
     ?>
 
-    <ul class="list-group list-group-flush flex-row border rounded mt-2">
-        <li class="list-group-item class_utilisateur">
-            <div>
-                <?php echo $row['Nom']." ".$row['Prenom']; ?> :
-                <ul class="mb-0">
+    <div class="container mt-4">
+        <div class="row g-4">
+        <?php while ($row = $res->fetch_assoc()) : ?>
+
+            <div class="card-title">
+            <?php echo $row['Nom']." ".$row['Prenom']; ?> :
+                <ul class="list-unstyled mb-0">
                     <li> <?php echo $row['Mail']; ?> </li>
                 </ul>
-            </div>
-        </li>
-        <li>
-            <div class="mt-auto">
-                <form action="bdd/bddListeUtilisateurs.php" method = "POST">
+            </div>   
+        <div class="card-footer text-center">
+        <form action="bdd/bddListeUtilisateurs.php" method = "POST">
                 <?php if ($row['EstAdmin']): ?>
                     <input type="hidden" name="btnState" value="0">
                     <button type="submit" name="btnAdmin" value="<?php echo $row['UtilisateurId']; ?>" class="btn btn-color mb-2">Rétrograder à utilisateur</button>
@@ -40,11 +39,12 @@ else:
                 <?php endif;?>
                 </form>
             </div>
-        </li>
-    </ul>
+        <?php endwhile; ?>
+    </div>
+</div>
 
-    <?php endwhile;
-    $conn->close();
-    endif;
+<?php
+endif;
+$conn->close();
 endif;
 include_once 'composant/footer.php'; ?>
