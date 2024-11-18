@@ -29,8 +29,8 @@ else :
                             <li>Description: <?php echo $row['Description']; ?></li>
                         </ul>
                     </div>
-                    <?php if (isset($_SESSION['UtilisateurId'])): ?>
-                        <div class="card-footer text-center">
+                    <div class="card-footer text-center">
+                        <?php if (isset($_SESSION['UtilisateurId'])): ?>
                             <form action="bdd/inscriptionCourse.php" method="POST">
                                 <?php if (in_array($row['EntrainementId'], array_column($inscriptions, 'EntrainementId'), true)): ?>
                                     <input type="hidden" name="btnState" value="delete">
@@ -41,15 +41,15 @@ else :
                                 <?php endif; ?>
                                 <input type="hidden" name="source" value="../entrainements.php">
                             </form>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (@$_SESSION['EstAdmin']): ?>
-                        <div>
-                            <form action="listeUtilisateurs.php" method = "POST">
-                                <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-color mb-2">Liste inscrits</button>
-                            </form>
-                        </div>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <?php if (@$_SESSION['EstAdmin']): ?>
+                            <div>
+                                <form action="listeUtilisateurs.php" method = "POST">
+                                    <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-color mb-2">Liste inscrits</button>
+                                </form>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         <?php endwhile; ?>
