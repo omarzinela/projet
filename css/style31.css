@@ -96,3 +96,9 @@ btn btn-primary{
    width: 100%; 
    height: 250px;
 }
+.btn-success {
+    color: red;
+}
+.btn-success {
+    background-color: red;
+}
