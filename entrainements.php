@@ -16,7 +16,7 @@ else :
         <?php while ($row = $res->fetch_assoc()) : ?>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 border rounded">
-                    <img src="<?php echo $row['EntrainementThumbnail']; ?>" alt="Miniature de l'entraînement" class="card-img-top img-fluid" style="object-fit: cover; height: 200px; width: 100%;">
+                    <img src="<?php echo $row['EntrainementThumbnail']; ?>" alt="Miniature de l'entraînement" class="card-img-top img-fluid entrainement" >
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row['EntrainementNom']; ?></h5>
                         <ul class="list-unstyled mb-0">
