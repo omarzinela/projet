@@ -11,14 +11,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location:../index.php'); // Rediriger vers page principale si l'utilisateur n'arrive pas du form
 }
 
-$dossierCible = dirname(__FILE__)."/../uploads/";
-$fichierCible = $dossierCible . $timestamp . '_' . basename($_FILES["image"]["name"]);
-$fichierCibleBdd = 'uploads/' . $timestamp . '_' . basename($_FILES["image"]["name"]);
+if (isset($_FILES["image"]["name"])) {
+    $dossierCible = dirname(__FILE__)."/../uploads/";
+    $fichierCible = $dossierCible . $timestamp . '_' . basename($_FILES["image"]["name"]);
+    $fichierCibleBdd = 'uploads/' . $timestamp . '_' . basename($_FILES["image"]["name"]);
 
-if (!move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
-    $_SESSION['Err'] = "Enregistrement de l'image impossible!";
-} else {
-
+    if (!move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
+        $_SESSION['Err'] = "Enregistrement de l'image impossible!";
+    }
+}
     require_once dirname(__FILE__).'/../composant/bddConn.inc.php';
 
     $stmt = $conn->prepare('insert into Entrainements (EntrainementNom, EntrainementTimestamp, Categorie, Description, MaxParticipants, EntrainementThumbnail, Lieu) values (?, ?, ?, ?, ?, ?, ?)');
@@ -30,6 +31,6 @@ if (!move_uploaded_file($_FILES["image"]["tmp_name"], $fichierCible)) {
     }
     // Closing the connection.
     $conn->close();
-}
+
 
 header('Location:'."../index.php");
