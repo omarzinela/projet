@@ -32,28 +32,24 @@ else :
                         </ul>
                     </div>
 
-                    <div class="card-footer p-2 text-center">
-                        <?php if (isset($_SESSION['UtilisateurId'])): ?>
-                            <div class="d-flex justify-content-between">
-                                <form action="bdd/inscriptionCourse.php" method="POST" class="d-inline-block">
-                                    <?php if (in_array($row['EntrainementId'], array_column($inscriptions, 'EntrainementId'), true)): ?>
-                                        <input type="hidden" name="btnState" value="delete">
-                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-danger mb-1">Se désinscrire</button>
-                                    <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
-                                        <input type="hidden" name="btnState" value="create">
-                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-success mb-1">S'inscrire</button>
-                                    <?php endif; ?>
-                                    <input type="hidden" name="source" value="../entrainements.php">
-                                </form>
+                    <div class="card-footer text-center">
+                    <form action="bdd/inscriptionCourse.php" method="POST" class="d-inline-block">
+        <?php if (in_array($row['EntrainementId'], array_column($inscriptions, 'EntrainementId'), true)): ?>
+                        <input type="hidden" name="btnState" value="delete">
+                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-danger mb-2 btn-inscrire">Se désinscrire</button>
+        <?php elseif (@$nbParti[$row['EntrainementId']] < $row['MaxParticipants']): ?>
+                        <input type="hidden" name="btnState" value="create">
+            <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-success mb-2 btn-inscrire">S'inscrire</button>
+        <?php endif; ?>
+                         <input type="hidden" name="source" value="../entrainements.php">
+            </form>
+        <?php if (@$_SESSION['EstAdmin']): ?>
+        <form action="listeUtilisateurs.php" method="POST" class="d-inline-block">
+            <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-color mb-2">Liste inscrits</button>
+        </form>
+        <?php endif; ?>
+        </div>
 
-                                <?php if (@$_SESSION['EstAdmin']): ?>
-                                    <form action="listeUtilisateurs.php" method="POST" class="d-inline-block">
-                                        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId']; ?>" class="btn btn-sm btn-color mb-1">Liste inscrits</button>
-                                    </form>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
                 </div>
             </div>
         <?php endwhile; ?>
