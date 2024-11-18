@@ -29,8 +29,8 @@ else:
                 </ul>
             </div>
         </li>
-            <div class="mt-auto">
-                <form action="bdd/bddListeUtilisateurs.php" method = "POST">
+        <div class="card-footer text-center">
+        <form action="bdd/bddListeUtilisateurs.php" method = "POST">
                 <?php if ($row['EstAdmin']): ?>
                     <input type="hidden" name="btnState" value="0">
                     <button type="submit" name="btnAdmin" value="<?php echo $row['UtilisateurId']; ?>" class="btn btn-color mb-2">Rétrograder à utilisateur</button>
