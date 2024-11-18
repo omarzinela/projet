@@ -22,8 +22,8 @@ else:
         <div class="row g-4">
         <?php while ($row = $res->fetch_assoc()) : ?>
 
-            <div>
-                <?php echo $row['Nom']." ".$row['Prenom']; ?> :
+            <div class="card-body">
+            <?php echo $row['Nom']." ".$row['Prenom']; ?> :
                 <ul class="list-unstyles mb-0">
                     <li> <?php echo $row['Mail']; ?> </li>
                 </ul>
