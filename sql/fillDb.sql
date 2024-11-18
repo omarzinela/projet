@@ -20,5 +20,3 @@ insert into Utilisateurs (Nom, Prenom, Mail, Pass, EstAdmin) values
 ('Lemoine', 'Julien', 'julien.lemoine@example.com', '$2a$07$TLsh0yckZjYaI4hgJfB/.FEmAnXz9bm6qFSaXmTZllL03FifvqVze', true),
 ('Benoit', 'Isabelle', 'isabelle.benoit@example.com', '$2a$07$gcmjmjLPpHlUIM32Wy3//w7a6EvzQ0nL9xv59ZY5aMZfJtIZk9Nsm', false),
 ('Meyer', 'Eric', 'eric.meyer@example.com', '$2a$07$Tqdyj7pc.mU9BdD1jfd8fTm0Y1Xb0RJLbLwFTpmZn6CzKSOFwpOiO', true);
-
-insert into Inscriptions (EntrainementId, UtilisateurId, InscriptionTimestamp) values ('58ca31fd-9ec8-11ef-b9b9-6e55f23bb8a8','91746e7b-9ec7-11ef-b9b9-6e55f23bb8a8', unix_timestamp());
