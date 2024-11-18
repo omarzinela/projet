@@ -7,7 +7,7 @@ header{
     margin-top: 2rem;
 }
 main{
-    min-height: 80%;
+    min-height: 700px;
 }
 .a_propos_paragraphe{
 position: absolute;
@@ -38,7 +38,7 @@ animation: fadeOut 5s forwards;
       }
 
 .class_footer{
-      min-height: 85%;
+      min-height: 550px;
 }
 .img_a_propos{
     margin-right: 15%;

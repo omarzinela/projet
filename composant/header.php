@@ -12,6 +12,16 @@
 
     <title>RUNNINESIGELEC</title>
 </head>
+<script>
+document.querySelectorAll('.navbar-nav a').forEach(item => {
+  item.addEventListener('click', () => {
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  if (navbarCollapse.classList.contains('show')) {
+  navbarCollapse.classList.remove('show');
+  }
+  });
+});
+</script>
 <?php session_start(); ?>
 <body>
     <div class="container-fluid">
