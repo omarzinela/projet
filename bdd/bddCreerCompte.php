@@ -1,5 +1,6 @@
 <?php
 session_start();
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Pour la vérif de mail unique
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Récupérer les valeurs du form
@@ -24,10 +25,10 @@ if (strcmp($domain, 'groupe-esigelec.org') != 0) { // Authoriser uniquement les 
     try {
         $stmt->execute();
     } catch (mysqli_sql_exception $e) {
-        if($stmt->errno == 1062) {
+        if($e->getCode() == 1062) { // Erreur non unicité mail
             $_SESSION["Err"] = "Email déjà utilisé";
         } else {
-            $_SESSION["Err"] = "Échec exécution requête: " . $stmt->error;
+            $_SESSION["Err"] = "Échec exécution requête: " . $e->getMessage();
         }
         $redir = '../creer_compte.php';
     }
