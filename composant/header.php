@@ -55,6 +55,9 @@ document.querySelectorAll('.navbar-nav a').forEach(item => {
                         <li class="nav-item">
                             <a class="nav-link active" href="ajouter_entrainement.php">Ajouter un entraînement</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="listeUtilisateurs.php">Liste Utilisateurs</a>
+                        </li>
                         <?php endif; ?>
 
                                          
