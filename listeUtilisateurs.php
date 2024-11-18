@@ -22,13 +22,12 @@ else:
         <div class="row g-4">
         <?php while ($row = $res->fetch_assoc()) : ?>
 
-            <div class="card-body">
+            <div class="card-title">
             <?php echo $row['Nom']." ".$row['Prenom']; ?> :
-                <ul class="list-unstyles mb-0">
+                <ul class="list-unstyled mb-0">
                     <li> <?php echo $row['Mail']; ?> </li>
                 </ul>
-            </div>
-        </li>
+            </div>   
         <div class="card-footer text-center">
         <form action="bdd/bddListeUtilisateurs.php" method = "POST">
                 <?php if ($row['EstAdmin']): ?>
