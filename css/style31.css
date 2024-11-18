@@ -94,7 +94,7 @@ btn btn-primary{
 .img_entrainement{
    object-fit: cover; 
    width: 100%; 
-   height: 250px;
+   height: 150px;
 }
 .btn-success {
     color: red;

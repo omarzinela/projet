@@ -72,7 +72,7 @@ else :
     <?php endif;?>
           <li> <div class="box mt-4 div_auto">
         <div class="div div_auto">
-        <img src="<?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img-fluid img_course" style="object-fit: cover; width: 100%; height: 250px;">
+        <img src="<?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img-fluid img_entrainement">
         </div>
     </div></li>
    
