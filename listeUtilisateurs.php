@@ -4,11 +4,17 @@ if(!@$_SESSION['EstAdmin']):
     $_SESSION['Warn'] = "Vous N'êtes pas admin!";
     header('Location:index.php');
 else:
-    require_once('bdd/bddListeUtilisateurs.php');
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $EntrainementId = $_REQUEST['EntrainementId'];
+    } else {
+        $_SESSION['source'] = '../listeUtilisateurs.php';
+    }
+    require_once 'composant/listeUtilisateurs.inc.php';
     if (!$res) :
         $_SESSION["Err"] = '<p>Échec requête: ' . $conn->error . '</p>';
     elseif ($res->num_rows == 0) :
         $_SESSION["Info"] = '<p>Aucun utilisateur dans la bdd</p>';
+        header('Location:'.substr($_SESSION['source'],3)); // Offset pour retirer le ../
     else :
         while ($row = $res->fetch_assoc()) : // Créer les éléments de la liste dans une boucle depuis la bdd
     ?>
@@ -32,7 +38,6 @@ else:
                     <input type="hidden" name="btnState" value="1">
                     <button type="submit" name="btnAdmin" value="<?php echo $row['UtilisateurId']; ?>" class="btn btn-color mb-2">Promouvoir à membre</button>
                 <?php endif;?>
-                    <input type="hidden" name="source" value="../listeUtilisateurs.php">
                 </form>
             </div>
         </li>

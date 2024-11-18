@@ -41,6 +41,14 @@ else :
     </div>
     <?php endif;?>
 
+    <?php if (@$_SESSION['EstAdmin']): ?>
+    <div class="mt-auto">
+        <form action="listeUtilisateurs.php" method = "POST">
+        <button type="submit" name="EntrainementId" value="<?php echo $row['EntrainementId'] ?>" class="btn btn-color mb-2">Liste inscrits</button>
+        </form>
+    </div>
+    <?php endif;?>
+
     <li> <div class="box mt-4 div_auto">
         <div class="div div_auto">
             <img src=" <?php echo $row['EntrainementThumbnail'] ?>" alt="Miniature de l'entraînement" class="img_course">
